@@ -78,6 +78,40 @@ public class FirstPhase {
         String msgBus = cantBuses + (cantBuses > 1 ? " buses" : " bus");
         System.out.println("Al ser un total de "+totalPeople+" personas que harán parte de la actividad, se necesitarán un total de: \n"+msgBus+" para llevarla a cabo de manera exitosa. ¡Nos vemos en la COP16!");
     }
+    /**
+     * Name: verificarTemperatura
+     * Description: Verify the temperature and return a message
+     * Pre-condition: temperatura must be a float
+     * Post-condition: Return a message according to the temperature
+     * @param temperatura float for the temperature
+     * @return verificationMsg a message according to the temperature
+     */
+    public static String verificarTemperatura(float temperatura) {
+        String verificationMsg = "";
+        if (temperatura < 15) {
+            verificationMsg = "¡Lleve chaqueta para protegerse del frio y de la lluvia!";
+        }
+        else if (temperatura > 28) {
+            verificationMsg = "LLeve termo del agua, beba para hidratarse";
+        }
+        else {
+            verificationMsg = "¡Disfrute la caminata!";
+        }
+        return verificationMsg;
+    }
+    /**
+     * Name: obtenerRegalo
+     * Description: Print a message according to the first letter of the name
+     * Pre-condition: name must be a string
+     * Post-condition: Print a message according to the first letter of the name
+     * @param name String for the name
+     */
+    public static void obtenerRegalo(String name) {
+        char firstChar = name.toLowerCase().charAt(0);
+        if (firstChar == 'a' || firstChar == 'e' || firstChar == 'i' || firstChar == 'o' || firstChar == 'u') {
+            System.out.println("Comuniquese al número 1800456789 para obtener una entrada gratuita a una conferencia del cop16");
+        }
+    }
     public static void main(String[] args) {
         /*
          * Scanner for the user input
